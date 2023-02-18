@@ -58,7 +58,8 @@
             margin: 2rem 0;
             width: 10rem;
             color: $color5;
-            position: relative;
+            right: -20%;
+            position:relative;
   
             &::after {
               content: "";
@@ -67,8 +68,8 @@
               height: 5rem;
               border-radius: 50px;
               position: absolute;
-              top: 20%;
-              left: 20%;
+              top: -5%;
+              left: -12%;
               z-index: -1;
             }
             > p {

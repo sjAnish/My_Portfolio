@@ -15,8 +15,8 @@ const Home = ({ ratio }) => {
     });
   };
   const animationProjectsCount = () => {
-    animate(0, 500, {
-      duration: 1,
+    animate(0, 5, {
+      duration: 2,
       onUpdate: (v) => (projectCount.current.textContent = v.toFixed()),
     });
   };
@@ -53,7 +53,7 @@ const Home = ({ ratio }) => {
 
           <Typewriter
             options={{
-              strings: ["A Developer", "A Designer", "A Creator"],
+              strings: ["A Developer", "A Designer", "A Coder"],
               autoStart: true,
               loop: true,
               cursor: "",
@@ -68,29 +68,16 @@ const Home = ({ ratio }) => {
             </a>
           </div>
 
-          <article>
-            <p>
-              +
-              {ratio < 2 && (
-                <motion.span
-                  whileInView={animationClientsCount}
-                  ref={clientCount}
-                ></motion.span>
-              )}
-            </p>
-            <span>Clients Worldwide</span>
-          </article>
-
           <aside>
             <article>
               <p>
                 +
-                {ratio < 2 && (
+                {ratio < 5 && (
                   <motion.span
                     ref={projectCount}
                     whileInView={animationProjectsCount}
                   >
-                    500
+                    
                   </motion.span>
                 )}
               </p>
